@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 
 export default class Form extends Component {
-    state = {
-        text : this.props.text
-    }
+   
     changeInput = (e) => {
         const newText = e.target.value;
-        this.setState({text:newText}, ()=>{
-            this.props.changeText(newText);
-        });
+        this.props.changeText(newText);
+        
     };
     
     render() {
-        // const {text} = this.state;
         return (
             <form id="form">
                 <div>
@@ -21,14 +17,16 @@ export default class Form extends Component {
                             className="form-control" 
                             id="input-field" 
                             onChange={this.changeInput}
+                            value={this.props.text}
                            />
                     
                     <button className="btn"
-                            type="button">
+                            type="button"
+                            onClick={this.props.restart.bind(this)}>
                                 <i className="fa fa-refresh" 
                                    aria-hidden="true"></i>
                     </button>
-                    {this.test}
+                    
                 </div>
             </form>
         )

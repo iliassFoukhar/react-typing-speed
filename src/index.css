@@ -12,7 +12,7 @@ body{
 div.App{
   background-color:#0f0f0f; 
   width: 50vw;
-  height: 30vh;
+  
   color : #eee;
   position:absolute;
   transform:translate(-50%, -50%);
@@ -45,7 +45,17 @@ header h1{
   font-weight : 100;
   cursor : pointer;
   border : none;
- 
+  transition : 0.3s all;
+}
+
+.btn:hover{
+  background-color: rgb(132, 19, 155);
+  color : rgb(3, 3, 3);
+  text-shadow : none;
+}
+.btn:focus{
+  outline : none;
+  border:none;
 }
 #input-field{
   width:100%;
