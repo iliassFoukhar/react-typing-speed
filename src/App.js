@@ -6,19 +6,19 @@ import Header from './components/Header.js';
 import React, { Component } from 'react'
 
 export default class App extends Component {
-  state = {
-    wpm : 0,
-    cpm : 0,
-    curr : 0,
-    words : [],
-    characters: [],
-    loading : true,
-    playing : false,
-    timer : 60,
-    inputText: '',
-    quote: '',
-    display: []
-  }
+  // state = {
+  //   wpm : 0,
+  //   cpm : 0,
+  //   curr : 0,
+  //   words : [],
+  //   characters: [],
+  //   loading : true,
+  //   playing : false,
+  //   timer : 60,
+  //   inputText: '',
+  //   quote: '',
+  //   display: []
+  // }
   initialState = {
     wpm : 0,
     cpm : 0,
@@ -32,6 +32,7 @@ export default class App extends Component {
     quote: '',
     display: []
   }
+  state = this.initialState
   onRestart = () => {
     this.setState(this.initialState, ()=>{
       this.fetchWords();
